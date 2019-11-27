@@ -33,8 +33,7 @@ public class FinalScore extends Score {
 
     @Override
     public String toString() {
-        return "FinalScore{" +
-                "thirdScore=" + thirdScore +
-                '}';
+        return super.toString() +
+                ", 3rd=[ " + thirdScore + " ]";
     }
 }

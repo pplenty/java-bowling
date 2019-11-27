@@ -11,8 +11,8 @@ public class FinalFrame implements Frame {
     private final int frameNo;
     private Status status;
 
-    public FinalFrame(int frameNo) {
-        this.frameNo = frameNo;
+    public FinalFrame() {
+        this.frameNo = NUMBER_OF_FRAME;
         status = new FinalFirstThrow();
     }
 
@@ -24,6 +24,16 @@ public class FinalFrame implements Frame {
     @Override
     public void bowl(int score) {
         status = status.bowl(score);
+    }
+
+    @Override
+    public Frame next() {
+        return null;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return false;
     }
 
     @Override

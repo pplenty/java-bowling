@@ -11,8 +11,6 @@ import static java.util.stream.Collectors.toList;
  */
 public class ScoreBoard {
 
-    private static final int NUMBER_OF_FRAME = 10;
-
     private final String playerName;
     private final List<Frame> frames;
     private int currentFrameIndex = 0;
@@ -22,13 +20,12 @@ public class ScoreBoard {
         this.playerName = playerName;
         frames = new ArrayList<>();
 
-        NormalFrame frame = NormalFrame.first();
+        Frame frame = NormalFrame.first();
         frames.add(frame);
-        for (int i = 1; i < NUMBER_OF_FRAME - 1; i++) {
+        while (frame.hasNext()) {
             frame = frame.next();
             frames.add(frame);
         }
-        frames.add(frame.last());
     }
 
     public List<Integer> getFrameNos() {

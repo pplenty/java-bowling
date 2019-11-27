@@ -50,9 +50,8 @@ public class Score {
 
     @Override
     public String toString() {
-        return "Score{" +
-                "firstScore=" + firstScore +
-                ", secondScore=" + secondScore +
-                '}';
+        return "Score: " +
+                "1st=[ " + firstScore + " ]" +
+                ", 2nd=[ " + secondScore + " ]";
     }
 }

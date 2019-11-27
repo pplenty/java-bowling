@@ -20,12 +20,17 @@ public class NormalFrame implements Frame {
         return new NormalFrame(1);
     }
 
-    public NormalFrame next() {
+    @Override
+    public Frame next() {
+        if (this.frameNo == NUMBER_OF_FRAME - 1) {
+            return new FinalFrame();
+        }
         return new NormalFrame(this.frameNo + 1);
     }
 
-    public FinalFrame last() {
-        return new FinalFrame(this.frameNo + 1);
+    @Override
+    public boolean hasNext() {
+        return true;
     }
 
     @Override

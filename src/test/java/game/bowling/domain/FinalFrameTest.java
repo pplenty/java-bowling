@@ -15,7 +15,7 @@ class FinalFrameTest {
     void miss() {
 
         // given
-        FinalFrame finalFrame = new FinalFrame(10);
+        FinalFrame finalFrame = new FinalFrame();
 
         // when
         finalFrame.bowl(1);
@@ -31,7 +31,7 @@ class FinalFrameTest {
     void strikeThreeTime() {
 
         // given
-        FinalFrame finalFrame = new FinalFrame(10);
+        FinalFrame finalFrame = new FinalFrame();
 
         // when
         finalFrame.bowl(10);
@@ -46,7 +46,7 @@ class FinalFrameTest {
     void secondThrowStrike() {
 
         // given
-        FinalFrame finalFrame = new FinalFrame(10);
+        FinalFrame finalFrame = new FinalFrame();
 
         // when
         finalFrame.bowl(10);
@@ -62,7 +62,7 @@ class FinalFrameTest {
     void thirdThrowStrike() {
 
         // given
-        FinalFrame finalFrame = new FinalFrame(10);
+        FinalFrame finalFrame = new FinalFrame();
 
         // when
         finalFrame.bowl(10);
@@ -79,7 +79,7 @@ class FinalFrameTest {
     void secondThrowSpare() {
 
         // given
-        FinalFrame finalFrame = new FinalFrame(10);
+        FinalFrame finalFrame = new FinalFrame();
 
         // when
         finalFrame.bowl(9);
@@ -95,7 +95,7 @@ class FinalFrameTest {
     void secondThrowSpareStrike() {
 
         // given
-        FinalFrame finalFrame = new FinalFrame(10);
+        FinalFrame finalFrame = new FinalFrame();
 
         // when
         finalFrame.bowl(9);
