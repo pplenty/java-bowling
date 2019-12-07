@@ -8,24 +8,24 @@ import game.bowling.domain.status.Status;
  */
 public class NormalFrame implements Frame {
 
-    private final int frameNo;
+    private final FrameNumber frameNo;
     private Status status;
 
-    private NormalFrame(int frameNo) {
+    private NormalFrame(FrameNumber frameNo) {
         this.frameNo = frameNo;
         status = new FirstThrow();
     }
 
     public static NormalFrame first() {
-        return new NormalFrame(1);
+        return new NormalFrame(FrameNumber.firstNumber());
     }
 
     @Override
     public Frame next() {
-        if (this.frameNo == NUMBER_OF_FRAME - 1) {
+        if (frameNo.hasNextOnlyOne()) {
             return new FinalFrame();
         }
-        return new NormalFrame(this.frameNo + 1);
+        return new NormalFrame(frameNo.next());
     }
 
     @Override
@@ -35,7 +35,7 @@ public class NormalFrame implements Frame {
 
     @Override
     public int getFrameNo() {
-        return frameNo;
+        return frameNo.get();
     }
 
     @Override

@@ -5,8 +5,6 @@ package game.bowling.domain;
  */
 public interface Frame {
 
-    int NUMBER_OF_FRAME = 10;
-
     int getFrameNo();
 
     void bowl(int score);

@@ -18,7 +18,7 @@ public class BowlingGame {
         Bowling bowling = new Bowling(playerName);
         resultView.render(bowling.getScoreBoard());
 
-        while(bowling.isNotFinish()) {
+        while (bowling.isNotFinish()) {
             int score = inputView.receiveScore(bowling.nextFrameNo());
             bowling.bowl(score);
             resultView.render(bowling.getScoreBoard());

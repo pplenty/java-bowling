@@ -2,6 +2,7 @@ package game.bowling.domain;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -28,7 +29,8 @@ public class FinalScore extends Score {
     }
 
     public Integer getThirdScore() {
-        return thirdScore;
+        return Optional.ofNullable(thirdScore)
+                .orElse(0);
     }
 
     @Override

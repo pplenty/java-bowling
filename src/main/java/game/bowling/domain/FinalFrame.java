@@ -8,17 +8,17 @@ import game.bowling.domain.status.Status;
  */
 public class FinalFrame implements Frame {
 
-    private final int frameNo;
+    private final FrameNumber frameNo;
     private Status status;
 
     public FinalFrame() {
-        this.frameNo = NUMBER_OF_FRAME;
+        this.frameNo = FrameNumber.finalNumber();
         status = new FinalFirstThrow();
     }
 
     @Override
     public int getFrameNo() {
-        return frameNo;
+        return frameNo.get();
     }
 
     @Override
