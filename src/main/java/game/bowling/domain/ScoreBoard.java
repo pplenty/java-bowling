@@ -1,5 +1,8 @@
 package game.bowling.domain;
 
+import game.bowling.domain.frame.Frame;
+import game.bowling.domain.frame.NormalFrame;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

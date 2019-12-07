@@ -29,10 +29,6 @@ public class FrameNumber {
         this.number = number;
     }
 
-    public boolean hasNextOnlyOne() {
-        return this.number == MAX - 1;
-    }
-
     public static FrameNumber of(int number) {
         return Optional.ofNullable(CACHE.get(number))
                 .orElseThrow(() -> new IllegalArgumentException(MESSAGE));
@@ -44,6 +40,14 @@ public class FrameNumber {
 
     public static FrameNumber finalNumber() {
         return CACHE.get(MAX);
+    }
+
+    public boolean hasNextOnlyOne() {
+        return this.number == MAX - 1;
+    }
+
+    public boolean isFinalNumber() {
+        return this.number == MAX;
     }
 
     public FrameNumber next() {

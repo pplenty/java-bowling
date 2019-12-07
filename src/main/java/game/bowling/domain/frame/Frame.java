@@ -1,4 +1,6 @@
-package game.bowling.domain;
+package game.bowling.domain.frame;
+
+import game.bowling.domain.Score;
 
 /**
  * Created by yusik on 2019/11/20.
